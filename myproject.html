@@ -1,0 +1,100 @@
+<html>
+  <head>
+    <title>Creating Blog Page</title>
+    <link rel="stylesheet" href="./assets/css/myproject.css" />
+  </head>
+
+  <body>
+    <!-- NavBar -->
+    <nav>
+      <div class="nav-left">
+        <ul>
+          <li>
+            <img
+              src="assets/images/dumbways.png"
+              alt="logo"
+              style="width: 60px"
+            />
+          </li>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="myproject.html" class="active">myproject</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="nav-right">
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Blog -->
+    <!-- Form -->
+
+    <form>
+      <div class="column"></div>
+    <div class="blog">
+      <div class="blog-form">
+        <div class="form-container">
+          <form onsubmit="addBlog(event)">
+            <h1>Create Post Blog</h1>
+            <div>
+              <label for="input-blog-title">Title</label>
+              <input id="input-blog-title" />
+            </div>
+            <div>
+              <label for="input-blog-content">Content</label>
+              <textarea id="input-blog-content"></textarea>
+            </div>
+            <div class="flex-input">
+              <div class="dateInput">
+                <label for="startInput">start date</label>
+                <input id="startInput" type="datetime-local" />
+              </div>
+            <div class="dateInput-end">
+                <label for="endInput">end data</label>
+                <input id="endInput" type="datetime-local" />
+              </div>
+            </div>
+            <div>
+              <label for="technologies">technologies</label>
+              <div class="tech">
+                <div class="tech1">
+                  <div class="flex-box">
+                    <label for="python"><input type="checkbox" id="python" />python</label>
+                    <label for="ruby"><input type="checkbox" id="ruby" />rtuby</label>
+                  </div>
+                  <div class="flex-box">
+                    <label for="javascrip"><input type="checkbox" id="javascrip" />javascrip</label>
+                    <label for="typescrip"><input type="checkbox" id="typescrip" />typescrip</label>
+                </div>
+              </div>
+              </div>
+            <div class="uploud-image">
+              <label for="images">upload images</label>
+              <div class="group-uploud">
+                <label class="flex-uploud" for="input-image">
+                  <p>choose</p>
+                  <img src="./assets/images/Screenshot 2024-07-21 130254.png">
+                </label>
+                <input type="file" id="input-image" hidden>
+              </div>
+            </div>
+            <div class="button-group">
+              <button onclick="addBlog(event)" type="button">Post blog</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div id="test"></div>
+      <hr class="line" />
+      <div id="contents" class="blog-list">
+        <!-- dynamic content would be here -->
+      </div>
+    </div>
+    <script src="./assets/js/myproject.js"></script>
+  </body>
+</html>
