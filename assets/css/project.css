@@ -1,0 +1,25 @@
+.project2 {
+    margin: auto;
+    width: 35%;
+    display: block;
+}
+
+.project2 h1 {
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.project {
+    display: flex;
+}
+
+.project3 {
+    width: 70%;
+    margin-right: 50px;
+}
+
+body {
+    background-color: rgb(124, 231, 172);
+    ;
+}

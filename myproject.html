@@ -1,40 +1,48 @@
 <html>
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creating Blog Page</title>
-    <link rel="stylesheet" href="./assets/css/myproject.css" />
+    <link rel="stylesheet" href="./assets/css/myproject.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
 
   <body>
     <!-- NavBar -->
     <nav>
       <div class="nav-left">
-        <ul>
-          <li>
-            <img
-              src="assets/images/dumbways.png"
-              alt="logo"
-              style="width: 60px"
-            />
-          </li>
-          <li>
-            <a href="index.html">Home</a>
-          </li>
-          <li>
-            <a href="myproject.html" class="active">myproject</a>
-          </li>
-        </ul>
+          <ul>
+              <li>
+                  <img src="./assets/images/dumbways.png" alt="logo-image" style="width: 60px;">
+              </li>
+              <li class="active">
+                  <a href="./index.html">Home</a>
+              </li>
+              <li class="active">
+                  <a href="./myproject.html">My Project</a>
+              </li>
+              <li class="active">
+                <a href="./testimonial.html">Testimonials</a>
+              </li>
+          </ul>
       </div>
-
       <div class="nav-right">
-        <a href="contact.html">Contact</a>
+          <a href="./contact.html">Contact Me</a>
+          <button onclick="togglenavbar()" class="btn-hamburger">
+              <i class="fa-solid fa-bars"></i>
+          </button>
       </div>
-    </nav>
+  </nav>
+  <ul class="hamburger-countainer" id="hamburger-countainer">
+      <li style="border: 2px rgb(59, 47, 47); text-align: center;  color: white; font-weight: bold; font-size: x-large;">Home</li>
+      <li style="border: 2px rgb(59, 47, 47); text-align: center; color: white; font-weight: bold; font-size: x-large;">My Project</li>
+      <li style="border: 2px rgb(59, 47, 47); text-align: center;  color: white; font-weight: bold; font-size: x-large;">Contact Me</li>
+  </ul>
 
     <!-- Blog -->
     <!-- Form -->
 
     <form>
-      <div class="column"></div>
     <div class="blog">
       <div class="blog-form">
         <div class="form-container">
@@ -45,8 +53,10 @@
               <input id="input-blog-title" />
             </div>
             <div>
-              <label for="input-blog-content">Content</label>
-              <textarea id="input-blog-content"></textarea>
+              <div>
+                <label for="input-blog-content">Content</label>
+                <textarea class="textarea" id="input-blog-content"></textarea>
+              </div>
             </div>
             <div class="flex-input">
               <div class="dateInput">
@@ -64,7 +74,7 @@
                 <div class="tech1">
                   <div class="flex-box">
                     <label for="python"><input type="checkbox" id="python" />python</label>
-                    <label for="ruby"><input type="checkbox" id="ruby" />rtuby</label>
+                    <label for="ruby"><input type="checkbox" id="ruby" />ruby</label>
                   </div>
                   <div class="flex-box">
                     <label for="javascrip"><input type="checkbox" id="javascrip" />javascrip</label>
@@ -92,9 +102,16 @@
       <div id="test"></div>
       <hr class="line" />
       <div id="contents" class="blog-list">
+        
         <!-- dynamic content would be here -->
       </div>
     </div>
     <script src="./assets/js/myproject.js"></script>
+    <script>
+      function togglenavbar() {
+      const element = document.getElementById("hamburger-countainer")
+      element.classList.toggle("hamburger-countainer")
+      }
+  </script>
   </body>
 </html>

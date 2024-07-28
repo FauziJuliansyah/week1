@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +6,9 @@
     <title>Personal Website</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/testimonial.css">
 </head>
+
 <body>
     <nav>
         <div class="nav-left">
@@ -37,34 +39,25 @@
         <li style="border: 2px rgb(59, 47, 47); text-align: center;padding: 5px; color: white; font-weight: bold; font-size: x-large;">My Project</li>
         <li style="border: 2px rgb(59, 47, 47); text-align: center; padding: 5px; color: white; font-weight: bold; font-size: x-large;">Contact Me</li>
     </ul>
+
     <div class="container">
-        <div class="countainer1">
-            <img src="./assets/images/GANTENG.jpg" style="width: 100%; border-radius: 30px;">
-            <h1>FAUZI JULIANSYAH</h1>
-            <p style="display: none;">Seorang fullstack developer profesional</p>
-            <table style="border: 1px black solid; border-collapse: collapse; width: 100%;">
-                <tr>
-                    <th style="border: 1px black solid;"></th>
-                    <th style="border: 1px black solid;"></th>
-                </tr>
-                <tr>
-                    <td style="border: 1px black solid; text-align: center;">
-                        Saya Fauzi Juliansyah umur saya 21 tahun, kesibukan saya bekerja di salah satu toko Frozen food.
-                    </td>
-                    <td style="border: 1px black solid; text-align: center;">2024</td>
-                </tr>
-            </table>
-        </div>
-        <div style="padding: 50px;">
-            <h1>WHAT I DO</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur atque tenetur eum ipsa velit ea ad dolorem blanditiis? Fuga ullam quam ut saepe nostrum consequatur necessitatibus doloribus alias, ipsa quasi!</p>
+    <h1>My Testimonials</h1>
+    <div class="container-rating">
+        <h2>Rating By Star</h2>
+        <div class="rating">
+        <button onclick="allTestimonial()" class="rating-btn">All</button>
+        <button onclick="filterTestimonial(1)" class="rating-btn">1 <i class="fa-solid fa-star"></i></button>
+        <button onclick="filterTestimonial(2)" class="rating-btn">2 <i class="fa-solid fa-star"></i></button>
+        <button onclick="filterTestimonial(3)" class="rating-btn">3 <i class="fa-solid fa-star"></i></button>
+        <button onclick="filterTestimonial(4)" class="rating-btn">4 <i class="fa-solid fa-star"></i></button>
+        <button onclick="filterTestimonial(5)" class="rating-btn">5 <i class="fa-solid fa-star"></i></button>
         </div>
     </div>
-    <script>
-        function togglenavbar() {
-        const element = document.getElementById("hamburger-countainer")
-        element.classList.toggle("hamburger-countainer")
-        }
-    </script>
+
+    <section class="testimonials" id="testimonials">
+        
+    </section>
+    </div>
+    <script src="assets/js/testimonial.js"></script>
 </body>
 </html>

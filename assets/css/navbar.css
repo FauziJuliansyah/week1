@@ -1,0 +1,77 @@
+nav {
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+}
+
+nav ul li {
+    margin-right: 25px;
+    font-size: 20px;
+}
+
+nav ul li .active {
+    color: orangered;
+}
+
+.nav-left {
+    flex: 50%;
+    /* mengatur lebar */
+}
+
+.nav-right {
+    flex: 50%;
+    text-align: end;
+    display: flex;
+    justify-content: end;
+}
+
+.nav-right a {
+    background-color: orangered;
+    padding: 8px 20px;
+    color: white;
+    border-radius: 5px;
+}
+
+.logo {
+    width: 40px;
+}
+
+.hamburger-countainer {
+    background-color: gray;
+    list-style-type: none;
+    display: none;
+}
+
+#hamburger-countainer li {
+    background-color: gray;
+}
+
+.btn-hamburger {
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .nav-right a {
+        display: none;
+    }
+
+    .btn-hamburger {
+        display: flex;
+    }
+
+    .active {
+        display: none;
+    }
+}
